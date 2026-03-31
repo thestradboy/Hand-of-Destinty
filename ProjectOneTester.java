@@ -16,8 +16,8 @@ public class ProjectOneTester{
             //make objects
             Character player = new Character(10, 5, 0, "Basic Sword");
             Enemy monster = new Enemy(1, 5, 0, "Stick");
-            monster.setMoney(monster.moneyCalc());
             WaveTracker tracker = new WaveTracker();
+            monster.setMoney(monster.moneyCalc(tracker.getWave()));
 
             //GAME LOOP
             while (player.getHp() > 0){
@@ -45,14 +45,14 @@ public class ProjectOneTester{
                 //if monster is killed, then move onto next wave
                 if (result.contains("you won") || monster.getHp() <= 0) {
                     int earnings = monster.getMoney();
-                    player.setMoney(earnings);
+                    player.addMoney(earnings);
                     int nextWave = tracker.getWave() + 1; 
                     tracker.setWave(nextWave); 
                     
                     System.out.println("\n*** ENEMY DEFEATED! Leveling up... ***");
 
                     //generates new enemy
-                    monster = new Enemy(nextWave, nextWave * 5, 0, "Steel Blade"); 
+                    monster = new Enemy(nextWave, nextWave * 5, monster.moneyCalc(nextWave), "Steel Blade"); 
                 }
             }
 

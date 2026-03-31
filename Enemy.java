@@ -18,16 +18,15 @@ public class Enemy extends Character {
         return super.getHp();
     }
 
-    public int moneyCalc(){
+    public int moneyCalc(int wave){
         int drops;
 
         Random rand = new Random();
-        WaveTracker tracker = new WaveTracker();
 
-        if (tracker.getWave() < 3){
+        if (wave < 3){
             drops = rand.nextInt(11);
         }
-        else if(tracker.getWave() < 7){
+        else if(wave < 7){
             drops = rand.nextInt(40);
         }
         else{

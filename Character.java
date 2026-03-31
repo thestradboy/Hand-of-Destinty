@@ -8,6 +8,7 @@ public class Character {
     private int atk = 1; //attack
     private int hp = 5;  //hit points or health
     private int money = 5; //money
+    private int upgradeCount = 0;
     private String weapon = "basic sword";
 
     public Character(int atk, int hp, int money, String weapon){
@@ -120,6 +121,19 @@ public class Character {
         }
 
         return res;
+    }
+
+    public void weaponUpgrade (boolean newOrOld, int dmg, String name){
+        if (newOrOld){
+            this.upgradeCount++;
+            int curratk = this.getAtk();
+            this.setAtk(curratk + upgradeCount*2);
+        }
+        else{
+            this.upgradeCount = 0;
+            this.setAtk(dmg);
+            this.setWeapon(name);
+        }
     }
 
     @Override
