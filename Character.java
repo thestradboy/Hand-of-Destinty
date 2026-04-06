@@ -1,7 +1,9 @@
 /*
+Developer: Mushfiqul Islam
 Project: Hand of Destiny
 */
 import java.util.ArrayList;
+
 
 public class Character {
 
@@ -45,10 +47,12 @@ public class Character {
     public int getMoney() {
         return money;
     }
+    public int getUpgradeCount(){
+        return upgradeCount;
+    }
     public int hpLoss(int damage){
         return this.hp -= damage;
     }
-
 
     public void addMoney(int amount){
         this.money += amount;

@@ -1,4 +1,5 @@
 /*
+Developer: Mushfiqul Islam
 Project: Hand of Destiny
 */
 public class ShopItem {

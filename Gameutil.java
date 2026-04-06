@@ -1,4 +1,5 @@
 /*
+Developer: Mushfiqul Islam
 Project: Hand of Destiny
 */
 public class Gameutil {
@@ -21,16 +22,15 @@ public class Gameutil {
         return "Invalid action!"; //the action(s) provided is(are) invalid
     }
 
-    public static void saveHighScore(WaveTracker current){
-
+    public static String saveHighScore(WaveTracker current){//saves the highscore and returns a message to be displayed on the game over screen
         WaveTracker highscore = new WaveTracker(score);
 
         if (current.compareTo(highscore) > 0){
             score = current.getWave();
-            System.out.println("\n*********NEW PERSONAL BEST ACHIEVED! HIGHEST WAVE ACHIEVED: " + score + "*********");
+            return "NEW PERSONAL BEST! HIGHEST WAVE: " + score;
         }
         else{
-            System.out.println("*********Current session record: Wave " + score + "*********");
+            return "           Current session record: Wave " + score;
         }
     }
 

@@ -1,4 +1,5 @@
 /*
+Developer: Mushfiqul Islam
 Project: Hand of Destiny
 */
 import java.util.Random;

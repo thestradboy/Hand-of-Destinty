@@ -1,4 +1,5 @@
 /*
+Developer: Mushfiqul Islam
 Project: Hand of Destiny
 */
 
@@ -23,15 +24,6 @@ public class WaveTracker implements Comparable<WaveTracker> {
     //getter
     public int getWave() {
         return wave;
-    }
-
-    //this increments the wave count by 1
-    public int waveincrease(ArrayList<Integer> wave){
-        if (wave.get(1) == 1){
-            return (getWave() + 1);
-        }
-
-        return getWave();
     }
 
     //gets used in Gameutil to compare highscores
