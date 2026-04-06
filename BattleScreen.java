@@ -95,6 +95,7 @@ public class BattleScreen extends JPanel{
                         System.out.println( "wave" + tracker.getWave());
                         shop.hpFlip();
                         shop.resetReroll();
+                        gameGUI.resetShop();
                         attacking = true;
                         repaint();
                     }
