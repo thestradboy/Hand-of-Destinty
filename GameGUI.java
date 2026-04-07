@@ -20,7 +20,7 @@ public class GameGUI extends JFrame {
 
     public GameGUI(){
         //init game obj
-        player = new Character(2, 5, 50, "Basic Sword");
+        player = new Character(2, 5, 0, "Basic Sword");
         monster = new Enemy(1, 5, 0, "Stick");
         monster.setMoney(monster.moneyCalc(1));
         tracker = new WaveTracker();
