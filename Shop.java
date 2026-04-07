@@ -25,7 +25,7 @@ public class Shop {
 
         //mid tier shop
         midTier.add(new ShopItem("Longbow", 19, 19));
-        midTier.add(new ShopItem("Double-Sided \nSpear", 22, 20));
+        midTier.add(new ShopItem("Double-Sided Spear", 22, 20));
         midTier.add(new ShopItem("Hunting Axe",24 , 23));
         midTier.add(new ShopItem("Katana", 27, 25));
         midTier.add(new ShopItem("C4", 30, 29));
@@ -35,11 +35,11 @@ public class Shop {
         //god tier shop
         godTier.add(new ShopItem("Compound Bow", 41, 40));
         godTier.add(new ShopItem("Massive Javelin", 44, 45));
-        godTier.add(new ShopItem("Dwarven \nHunting \nAxe", 48, 53));
-        godTier.add(new ShopItem("Greatsword \nof \nLegends", 60, 70));
+        godTier.add(new ShopItem("Dwarven Hunting Axe", 48, 53));
+        godTier.add(new ShopItem("Greatsword of Legends", 60, 70));
         godTier.add(new ShopItem("NUKE", 100, 130));
         godTier.add(new ShopItem("Bazooka", 70, 100));
-        godTier.add(new ShopItem("Yggdrasil's \nBranch", 140, 160));
+        godTier.add(new ShopItem("Yggdrasil's Branch", 140, 160));
     }
 
     public int getRerollCost(){
